@@ -1,0 +1,48 @@
+<form action='/restaurants/{{restaurant._id}}/edit' method="POST">
+  <div class="container">
+    <div class="row mt-5">
+      <div class="form-group col-12 col-md-10">
+        <p>餐廳名稱：</p>
+        <input type="text" class="form-control" name="name" value="{{restaurant.name}}">
+      </div>
+      <div class="form-group col-12 col-md-10">
+        <p>英文名稱：</p>
+        <input type="text" class="form-control" name="name_en" value="{{restaurant.name_en}}">
+      </div>
+      <div class="form-group col-12 col-md-10">
+        <p>類別：</p>
+        <input type="text" class="form-control" name="category" value="{{restaurant.category}}">
+      </div>
+      <div class="form-group col-12 col-md-10">
+        <p>圖片：</p>
+        <input type="text" class="form-control" name="image" value="{{restaurant.image}}">
+      </div>
+      <div class="form-group col-12 col-md-10">
+        <p>地址：</p>
+        <input type="text" class="form-control" name="location" value="{{restaurant.location}}">
+      </div>
+      <div class="form-group col-12 col-md-10">
+        <p>電話：</p>
+        <input type="text" class="form-control" name="phone" value="{{restaurant.phone}}">
+      </div>
+      <div class="form-group col-12 col-md-10">
+        <p>地圖：</p>
+        <input type="text" class="form-control" name="google_map" value="{{restaurant.google_map}}">
+      </div>
+      <div class="form-group col-12 col-md-10">
+        <p>評分：</p>
+        <input type="text" class="form-control" name="rating" value="{{restaurant.rating}}">
+      </div>
+      <div class="form-group col-12 col-md-10">
+        <p>說明：</p>
+        <input type="text" class="form-control" name="description" value="{{restaurant.description}}">
+      </div>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <a href="/">
+        <button class="btn btn-primary">Close</button>
+      </a>
+    </div>
+  </div>
+</form>
