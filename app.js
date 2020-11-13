@@ -85,17 +85,21 @@ app.post("/restaurants/:id/delete", (req, res) => {
     .then(() => res.redirect("/"))
     .catch((error) => console.log(error));
 });
-
-//app.get("/search", (req, res) => {
-//const keyword = req.query.keyword;
-//const restaurants = restaurantList.results.filter((restaurant) => {
-//return (
-//  restaurant.name.toLowerCase().includes(keyword.toLowerCase()) ||
-//   restaurant.category.toLowerCase().includes(keyword.toLowerCase())
-// );
-// });
-// res.render("index", { restaurants: restaurants, keyword: keyword });
-//});
+//search
+app.get("/search", (req, res) => {
+  const keyword = req.query.keyword;
+  Restaurant.find()
+    .lean()
+    .then((restaurants) => {
+      return restaurants.filter(
+        (restaurant) =>
+          restaurant.name.toLowerCase().includes(keyword.toLowerCase()) ||
+          restaurant.category.toLowerCase().includes(keyword.toLowerCase())
+      );
+    })
+    .then((restaurants) => res.render("index", { restaurants, keyword }))
+    .catch((error) => console.log(error));
+});
 
 app.listen(port, () => {
   console.log(`Express is listening on localhost:${port}`);
