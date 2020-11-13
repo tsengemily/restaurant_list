@@ -26,19 +26,22 @@ db.once("open", () => {
 });
 
 //route setting
+//index
 app.get("/", (req, res) => {
   Restaurant.find()
     .lean()
     .then((restaurants) => res.render("index", { restaurants }))
     .catch((error) => console.log(error));
 });
+//瀏覽一筆
+app.get("/restaurants/:id", (req, res) => {
+  const id = req.params.id;
+  return Restaurant.findById(id)
+    .lean()
+    .then((restaurant) => res.render("show", { restaurant }))
+    .catch((error) => console.log(error));
+});
 
-//app.get("/restaurants/:restaurants_id", (req, res) => {
-// const restaurant = restaurantList.results.find(
-// (restaurant) => restaurant.id.toString() === req.params.restaurants_id
-//);
-// res.render("show", { restaurant: restaurant });
-//});
 //app.get("/search", (req, res) => {
 //const keyword = req.query.keyword;
 //const restaurants = restaurantList.results.filter((restaurant) => {
