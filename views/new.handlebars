@@ -1,8 +1,9 @@
 <form action='/restaurants' method="POST">
   <div class="container">
     <div class="row mt-5 justify-content-center">
+      <p class="col-12"><span style="color: #b92a2a; font-size: 1.5em">*</span>為必填</p>
       <div class="form-group col-12 col-md-10">
-        <p>餐廳名稱：</p>
+        <p><span style="color: #b92a2a; font-size: 1.5em">*</span>餐廳名稱：</p>
         <input type="text" class="form-control" name="name">
       </div>
       <div class="form-group col-12 col-md-10">
@@ -10,15 +11,17 @@
         <input type="text" class="form-control" name="name_en">
       </div>
       <div class="form-group col-12 col-md-10">
-        <p>類別：</p>
+        <p><span style="color: #b92a2a; font-size: 1.5em">*</span>類別：</p>
         <input type="text" class="form-control" name="category">
       </div>
       <div class="form-group col-12 col-md-10">
-        <p>圖片：</p>
+        <p><span style="color: #b92a2a; font-size: 1.5em">*</span>圖片：</p>
         <input type="text" class="form-control" name="image">
+        <label>(e.g.
+          https://lh5.googleusercontent.com/p/AF1QipMp4RrWcmEY7BVlufWiSY4oGJSiCHbQjgR6vt3v=w408-h306-k-no)</label>
       </div>
       <div class="form-group col-12 col-md-10">
-        <p>地址：</p>
+        <p><span style="color: #b92a2a; font-size: 1.5em">*</span>地址：</p>
         <input type="text" class="form-control" name="location">
       </div>
       <div class="form-group col-12 col-md-10">
@@ -26,22 +29,24 @@
         <input type="text" class="form-control" name="phone">
       </div>
       <div class="form-group col-12 col-md-10">
-        <p>地圖：</p>
+        <p><span style="color: #b92a2a; font-size: 1.5em">*</span>地圖：</p>
         <input type="text" class="form-control" name="google_map">
+        <label>(e.g. https://goo.gl/maps/VVPUazpJyfWU8Cof9)</label>
       </div>
       <div class="form-group col-12 col-md-10">
-        <p>評分：</p>
+        <p><span style="color: #b92a2a; font-size: 1.5em">*</span>評分：</p>
         <input type="text" class="form-control" name="rating">
+        <label>(e.g. 4.5)</label>
       </div>
       <div class="form-group col-12 col-md-10">
-        <p>說明：</p>
+        <p><span style="color: #b92a2a; font-size: 1.5em">*</span>說明：</p>
         <textarea class="form-control" name="description" rows="5">
         </textarea>
       </div>
-      <div class="form-group col-12
-       row justify-content-end mt-5">
+      <div class="col-12
+       row justify-content-end mt-5 mb-3">
         <button type="submit" class="btn btn-secondary mr-2">Submit</button>
-        <button class="btn btn-secondary m2-2">
+        <button class="btn btn-secondary mr-2">
           <a href="/" style="text-decoration: none; color:#ccc">Close</a>
         </button>
       </div>
