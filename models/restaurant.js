@@ -23,11 +23,11 @@ const restaurantSchema = new Schema({
   },
   phone: {
     type: String,
-    required: true,
+    required: false,
   },
   google_map: {
     type: String,
-    required: true,
+    required: false,
   },
   rating: {
     type: Number,

@@ -33,6 +33,35 @@ app.get('/', (req, res) => {
     .then((restaurants) => res.render('index', { restaurants }))
     .catch((error) => console.log(error))
 })
+//get create page
+app.get('/restaurants/new', (req, res) => {
+  return res.render('new')
+})
+//create
+app.post('/restaurants', (req, res) => {
+  const name = req.body.name
+  const nameEn = req.body.name_en
+  const category = req.body.category
+  const image = req.body.image
+  const location = req.body.location
+  const phone = req.body.phone
+  const googleMap = req.body.google_map
+  const rating = req.body.rating
+  const description = req.body.description
+  return Restaurant.create({
+    name,
+    nameEn,
+    category,
+    image,
+    location,
+    phone,
+    googleMap,
+    rating,
+    description,
+  })
+    .then(() => res.redirect('/'))
+    .catch((error) => console.log(error))
+})
 //detail
 app.get('/restaurants/:id', (req, res) => {
   const id = req.params.id
@@ -99,10 +128,6 @@ app.get('/search', (req, res) => {
     })
     .then((restaurants) => res.render('index', { restaurants, keyword }))
     .catch((error) => console.log(error))
-})
-//get create page
-app.get('/restaurants/new', (req, res) => {
-  return res.render('new')
 })
 
 app.listen(port, () => {

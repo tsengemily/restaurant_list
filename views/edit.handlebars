@@ -1,6 +1,6 @@
 <form action='/restaurants/{{restaurant._id}}/edit' method="POST">
   <div class="container">
-    <div class="row mt-5">
+    <div class="row mt-5 justify-content-center">
       <div class="form-group col-12 col-md-10">
         <p>餐廳名稱：</p>
         <input type="text" class="form-control" name="name" value="{{restaurant.name}}">
@@ -35,14 +35,15 @@
       </div>
       <div class="form-group col-12 col-md-10">
         <p>說明：</p>
-        <input type="text" class="form-control" name="description" value="{{restaurant.description}}">
+        <textarea class="form-control" name="description" rows="5">{{restaurant.description}}
+        </textarea>
+      </div>
+      <div class="form-group col-12
+       row justify-content-end mt-5">
+        <button type="submit" class="btn btn-secondary mr-2">Submit</button>
+        <button class="btn btn-secondary m2-2">
+          <a href="/" style="text-decoration: none; color:#ccc">Close</a>
+        </button>
       </div>
     </div>
-    <div>
-      <button type="submit" class="btn btn-secondary">Submit</button>
-      <button class="btn btn-secondary">
-        <a href="/">Close</a>
-      </button>
-    </div>
-  </div>
 </form>

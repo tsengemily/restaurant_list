@@ -3,52 +3,47 @@ header {
 }
 
 .navbar .navbar-brand {
-  color: #4592af;
+  color: #b92a2a;
 }
 
 .navbar .navbar-brand:hover {
-  color: #226089;
+  color: #6e5656;
+}
+
+.search-btn {
+  border-bottom: 1px solid #aaa;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  background: transparent;
+}
+
+.search-input {
+  width: 220px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #aaa;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  text-indent: 4px;
+  background: transparent;
 }
 
 .banner {
   position: relative;
   z-index: -1;
   margin: -5px;
-  height: 360px;
+  height: 250px;
   background: #dddddd center center
-    url("https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5720/restaurants-list-cover.jpg");
+    url('https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-size: cover;
   filter: blur(3px);
 }
 
-.search-bar .search-bar-outer {
-  margin: 0 auto;
-  max-width: 680px;
-  background-color: #fce2cf;
-  border-radius: 8px;
-  padding: 20px 30px;
-  border: 0;
-  margin-top: -60px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.search-bar .search-bar-inner h4 {
-  color: #9b4b4b;
-}
-
-.form-control::placeholder {
-  color: #aaaaaa;
-  font-size: 0.8rem;
-}
-
-.btn-major {
-  background-color: #9b4b4b;
-  color: white;
-}
-
-.form-control:focus {
-  box-shadow: none;
-  border-color: #ced4da;
+.banner-title {
+  color: rgb(109, 105, 105);
+  font-family: 'Saira Stencil One', cursive;
+  font-size: 60px;
 }
 
 .card {
@@ -70,16 +65,58 @@ header {
   font-size: 0.8rem;
 }
 
-.restaurant-show-title {
-  position: relative;
-  top: -100px;
-  color: white;
-  text-align: center;
-  font-size: 3rem;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+.btn {
+  width: 5rm;
+  border: 1.5px solid #ccc;
+  letter-spacing: 0.1em;
+  border-radius: 0px;
+  color: #ccc;
 }
 
-@media screen and (max-width: 992px) {
+.restaurant-show-title-border {
+  margin: 2em 0;
+  position: relative;
+  padding: 0.5em 1.5em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+}
+.restaurant-show-title-border:before,
+.restaurant-show-title-border:after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  height: -webkit-calc(100% + 20px);
+  height: calc(100% + 20px);
+  background-color: black;
+}
+.restaurant-show-title-border:before {
+  left: 10px;
+}
+.restaurant-show-title-border:after {
+  right: 10px;
+}
+
+.restaurant-show-title {
+  letter-spacing: 0.1em;
+  margin: 0;
+  padding: 0;
+}
+
+.description {
+  line-height: 2;
+  letter-spacing: 0.1em;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #fff;
+}
+
+style='letter-spacing: 0.1em; line-height: 2;'
+  .
+  @media
+  screen
+  and
+  (max-width: 992px) {
   .card img {
     height: 115px;
   }

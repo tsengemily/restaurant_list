@@ -1,30 +1,30 @@
-const mongoose = require("mongoose");
-const Restaurant = require("../restaurant");
-const restaurantData = require("./restaurant.json");
-const seedRestaurant = restaurantData.results;
+const mongoose = require('mongoose')
+const Restaurant = require('../restaurant')
+const restaurantData = require('./restaurant.json')
+const seedRestaurant = restaurantData.results
 
-mongoose.connect("mongodb://localhost/restaurant-list", {
+mongoose.connect('mongodb://localhost/restaurant-list', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-});
-const db = mongoose.connection;
-db.on("error", () => {
-  console.log("mongodb error !");
-});
-db.once("open", () => {
-  console.log("mongodb connected !");
-  seedRestaurant.forEach((r) => {
+})
+const db = mongoose.connection
+db.on('error', () => {
+  console.log('mongodb error !')
+})
+db.once('open', () => {
+  console.log('mongodb connected !')
+  seedRestaurant.forEach((restaurant) => {
     Restaurant.create({
-      name: r.name,
-      name_en: r.name_en,
-      category: r.category,
-      image: r.image,
-      location: r.location,
-      phone: r.phone,
-      google_map: r.google_map,
-      rating: r.rating,
-      description: r.description,
-    });
-  });
-  console.log("done");
-});
+      name: restaurant.name,
+      name_en: restaurant.name_en,
+      category: restaurant.category,
+      image: restaurant.image,
+      location: restaurant.location,
+      phone: restaurant.phone,
+      google_map: restaurant.google_map,
+      rating: restaurant.rating,
+      description: restaurant.description,
+    })
+  })
+  console.log('done')
+})

@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="/stylesheets/bootstrap.css">
   <link rel="stylesheet" href="/stylesheets/style.css">
   <script src="https://kit.fontawesome.com/bf7096817b.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Saira+Stencil+One&family=Ubuntu+Condensed&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -16,18 +20,31 @@
   <nav class="navbar navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="/">
-        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/6227/restaurant-list-logo.png"
-          width="30" height="30" class="d-inline-block align-top" alt="我的餐廳清單">
         我的餐廳清單
       </a>
+      <button type="button" class="btn" style="text-align: end;">
+        <a href="/restaurants/new" style="text-decoration: none; color: #ccc"><i class="fas fa-utensils mr-1"></i>CREATE
+          NEW
+          RESTAURANT</a>
+      </button>
     </div>
   </nav>
 
-  <button type="button" class="btn btn-secondary">
-    <a href="/restaurants/new">Create</a>
-  </button>
 
-  <div class="banner"></div>
+
+  <div class="banner">
+  </div>
+  <h1 class="banner-title ml-5">TO EAT, TO GO</h1>
+  <!-- search bar -->
+  <div class="container search-bar">
+    <form action="/search">
+      <div class="input-group row justify-content-end">
+        <button class="search-btn" type="submit" id="search-button"><i class="fas fa-search"></i></button>
+        <input type="text" name="keyword" value="{{keyword}}" placeholder="餐廳、分類" aria-label="Restaurant Name..."
+          aria-describedby="search-button" class="search-input">
+      </div>
+    </form>
+  </div>
   </header>
 
 
