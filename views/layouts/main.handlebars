@@ -35,16 +35,30 @@
   <div class="banner">
   </div>
   <h1 class="banner-title ml-5">TO EAT, TO GO</h1>
-  <!-- search bar -->
-  <div class="container search-bar">
+
+  <div class="row justify-content-end mr-5">
+    <div class="dropdown mr-3">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        排序
+      </a>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+
     <form action="/search">
-      <div class="input-group row justify-content-end">
+      <div class="input-group">
         <button class="search-btn" type="submit" id="search-button"><i class="fas fa-search"></i></button>
         <input type="text" name="keyword" value="{{keyword}}" placeholder="餐廳、分類" aria-label="Restaurant Name..."
           aria-describedby="search-button" class="search-input">
       </div>
     </form>
   </div>
+
   </header>
 
 

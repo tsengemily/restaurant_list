@@ -48,7 +48,7 @@
     <a href="/restaurants/{{restaurant._id}}/edit" method="POST">
       <button class="btn mr-2"><i class="fas fa-pen-nib"></i>EDIT</button>
     </a>
-    <form action="/restaurants/{{restaurant._id}}/delete" method="POST" style="display: inline">
+    <form action="/restaurants/{{restaurant._id}}?_method=DELETE" method="POST" style="display: inline">
       <button type="submit" class="btn mr-2"><i class="fas fa-trash"></i>DELETE</button>
     </form>
     <a href="/">
