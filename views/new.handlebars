@@ -4,7 +4,7 @@
       <p class="col-12"><span style="color: #b92a2a; font-size: 1.5em">*</span>為必填</p>
       <div class="form-group col-12 col-md-10">
         <p><span style="color: #b92a2a; font-size: 1.5em">*</span>餐廳名稱：</p>
-        <input type="text" class="form-control" name="name">
+        <input type="text" class="form-control" name="name" required="required">
       </div>
       <div class="form-group col-12 col-md-10">
         <p>英文名稱：</p>
@@ -12,36 +12,31 @@
       </div>
       <div class="form-group col-12 col-md-10">
         <p><span style="color: #b92a2a; font-size: 1.5em">*</span>類別：</p>
-        <input type="text" class="form-control" name="category">
+        <input type="text" class="form-control" name="category" required="required">
       </div>
       <div class="form-group col-12 col-md-10">
         <p><span style="color: #b92a2a; font-size: 1.5em">*</span>圖片：</p>
-        <input type="text" class="form-control" name="image">
-        <label>(e.g.
-          https://lh5.googleusercontent.com/p/AF1QipMp4RrWcmEY7BVlufWiSY4oGJSiCHbQjgR6vt3v=w408-h306-k-no)</label>
+        <input type="text" class="form-control" name="image" placeholder="https://..." required="required">
       </div>
       <div class="form-group col-12 col-md-10">
         <p><span style="color: #b92a2a; font-size: 1.5em">*</span>地址：</p>
-        <input type="text" class="form-control" name="location">
+        <input type="text" class="form-control" name="location" required="required">
       </div>
       <div class="form-group col-12 col-md-10">
         <p>電話：</p>
         <input type="text" class="form-control" name="phone">
       </div>
       <div class="form-group col-12 col-md-10">
-        <p><span style="color: #b92a2a; font-size: 1.5em">*</span>地圖：</p>
-        <input type="text" class="form-control" name="google_map">
-        <label>(e.g. https://goo.gl/maps/VVPUazpJyfWU8Cof9)</label>
+        <p><span style="color: #b92a2a; font-size: 1.5em">*</span>GOOGLE地圖：</p>
+        <input class="form-control" type="text" placeholder="https://goo.gl/maps/..." name="google_map">
       </div>
       <div class="form-group col-12 col-md-10">
-        <p><span style="color: #b92a2a; font-size: 1.5em">*</span>評分：</p>
-        <input type="text" class="form-control" name="rating">
-        <label>(e.g. 4.5)</label>
+        <p><span style="color: #b92a2a; font-size: 1.5em">*</span>GOOGLE評分：</p>
+        <input type="text" class="form-control" name="rating" placeholder="e.g. 4.5" required="required">
       </div>
       <div class="form-group col-12 col-md-10">
-        <p><span style="color: #b92a2a; font-size: 1.5em">*</span>說明：</p>
-        <textarea class="form-control" name="description" rows="5">
-        </textarea>
+        <p><span style="color: #b92a2a; font-size: 1.5em">*</span>描述：</p>
+        <textarea class="form-control" name="description" rows="5" required="required"></textarea>
       </div>
       <div class="col-12
        row justify-content-end mt-5 mb-3">
