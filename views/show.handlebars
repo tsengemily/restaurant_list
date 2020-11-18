@@ -1,3 +1,7 @@
+<head>
+  <script src='.././public/javascripts/delete.js'></script>
+</head>
+
 <div class="container">
   <div class="row mt-5">
 
@@ -49,7 +53,8 @@
       <button class="btn mr-2"><i class="fas fa-pen-nib"></i>EDIT</button>
     </a>
     <form action="/restaurants/{{restaurant._id}}?_method=DELETE" method="POST" style="display: inline">
-      <button type="submit" class="btn mr-2"><i class="fas fa-trash"></i>DELETE</button>
+      <button type="submit" class="btn mr-2" onclick="return del()"><i class=" fas
+        fa-trash"></i>DELETE</button>
     </form>
     <a href="/">
       <button class="btn"><i class="fas fa-arrow-right"></i>Back</button>
