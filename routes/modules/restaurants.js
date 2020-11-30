@@ -25,23 +25,23 @@ router.get('/new', (req, res) => {
 router.post('/', (req, res) => {
   const {
     name,
-    nameEn,
+    name_en,
     category,
     image,
     location,
     phone,
-    googleMap,
+    google_map,
     rating,
     description,
   } = req.body
   return Restaurant.create({
     name,
-    nameEn,
+    name_en,
     category,
     image,
     location,
     phone,
-    googleMap,
+    google_map,
     rating,
     description,
   })
@@ -69,24 +69,24 @@ router.put('/:id', (req, res) => {
   const id = req.params.id
   const {
     name,
-    nameEn,
+    name_en,
     category,
     image,
     location,
     phone,
-    googleMap,
+    google_map,
     rating,
     description,
   } = req.body
   return Restaurant.findById(id)
     .then((restaurant) => {
       restaurant.name = name
-      restaurant.name_en = nameEn
+      restaurant.name_en = name_en
       restaurant.category = category
       restaurant.image = image
       restaurant.location = location
       restaurant.phone = phone
-      restaurant.google_map = googleMap
+      restaurant.google_map = google_map
       restaurant.rating = rating
       restaurant.description = description
       return restaurant.save()

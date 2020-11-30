@@ -3,7 +3,7 @@
     <div class="row mt-5 justify-content-center">
       <div class="form-group col-12 col-md-10">
         <p>餐廳名稱：</p>
-        <input type="text" class="form-control" name="name" value="{{restaurant.name}}">
+        <input type="text" class="form-control" name="name" value="{{restaurant.name}}" required>
       </div>
       <div class="form-group col-12 col-md-10">
         <p>英文名稱：</p>
@@ -11,15 +11,15 @@
       </div>
       <div class="form-group col-12 col-md-10">
         <p>類別：</p>
-        <input type="text" class="form-control" name="category" value="{{restaurant.category}}">
+        <input type="text" class="form-control" name="category" value="{{restaurant.category}}" required>
       </div>
       <div class="form-group col-12 col-md-10">
         <p>圖片：</p>
-        <input type="text" class="form-control" name="image" value="{{restaurant.image}}">
+        <input type="text" class="form-control" name="image" value="{{restaurant.image}}" required>
       </div>
       <div class="form-group col-12 col-md-10">
         <p>地址：</p>
-        <input type="text" class="form-control" name="location" value="{{restaurant.location}}">
+        <input type="text" class="form-control" name="location" value="{{restaurant.location}}" required>
       </div>
       <div class="form-group col-12 col-md-10">
         <p>電話：</p>
@@ -27,15 +27,15 @@
       </div>
       <div class="form-group col-12 col-md-10">
         <p>地圖：</p>
-        <input type="text" class="form-control" name="google_map" value="{{restaurant.google_map}}">
+        <input type="text" class="form-control" name="google_map" value="{{restaurant.google_map}}" required>
       </div>
       <div class="form-group col-12 col-md-10">
         <p>評分：</p>
-        <input type="text" class="form-control" name="rating" value="{{restaurant.rating}}">
+        <input type="text" class="form-control" name="rating" value="{{restaurant.rating}}" required>
       </div>
       <div class="form-group col-12 col-md-10">
         <p>說明：</p>
-        <textarea class="form-control" name="description" rows="5">{{restaurant.description}}
+        <textarea class="form-control" name="description" rows="5" required>{{restaurant.description}}
         </textarea>
       </div>
       <div class="form-group col-12

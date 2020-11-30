@@ -25,7 +25,9 @@
               <a href="/restaurants/{{this._id}}/edit" class="btn mr-1" style="font-size: 5px;"><i
                   class="fas fa-pen-nib"></i>EDIT</a>
               <form action="/restaurants/{{this._id}}?_method=DELETE" method="POST" style="display: inline">
-                <button type="submit" class="btn" style="font-size: 5px;"><i class="fas fa-trash"></i>DELETE</button>
+                <button type="submit" class="btn" style="font-size: 5px;"
+                  onclick="if(confirm('您確定要刪除嗎?')) return true; else return false"><i
+                    class="fas fa-trash"></i>DELETE</button>
               </form>
             </div>
           </div>

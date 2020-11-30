@@ -1,8 +1,8 @@
 const Restaurant = require('../restaurant')
 const restaurantData = require('./restaurant.json')
 const seedRestaurant = restaurantData.results
+const db = require('../../config/mongoose')
 
-const db = mongoose.connection
 db.once('open', () => {
   seedRestaurant.forEach((restaurant) => {
     Restaurant.create({

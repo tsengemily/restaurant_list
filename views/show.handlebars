@@ -53,7 +53,7 @@
       <button class="btn mr-2"><i class="fas fa-pen-nib"></i>EDIT</button>
     </a>
     <form action="/restaurants/{{restaurant._id}}?_method=DELETE" method="POST" style="display: inline">
-      <button type="submit" class="btn mr-2" onclick="return del()"><i class=" fas
+      <button type="submit" class="btn mr-2" onclick="if(confirm('您確定要刪除嗎?')) return true; else return false"><i class=" fas
         fa-trash"></i>DELETE</button>
     </form>
     <a href="/">
